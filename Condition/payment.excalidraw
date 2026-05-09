@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "p5qr2cHYqVWANQzcEh4pk",
+      "type": "text",
+      "x": 59.63959045410155,
+      "y": 121.43756103515625,
+      "width": 701.0333801269531,
+      "height": 60.32989501953125,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 1730604850,
+      "version": 106,
+      "versionNonce": 745228846,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1760198345342,
+      "link": null,
+      "locked": false,
+      "text": "Link : https://web.programming-hero.com/payment-successful\ntransition Id: 251011214608050942164451a20",
+      "fontSize": 24.131958007812507,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Link : https://web.programming-hero.com/payment-successful\ntransition Id: 251011214608050942164451a20",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

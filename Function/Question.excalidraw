@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "NRXJczXaCnH3tHlrPK-64",
+      "type": "text",
+      "x": 269.2784842435394,
+      "y": -562.1492647594882,
+      "width": 711,
+      "height": 1442.9920083266027,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 659669122,
+      "version": 494,
+      "versionNonce": 255267202,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1760169084120,
+      "link": null,
+      "locked": false,
+      "text": "🟢 Basic Level\n\nWhat is a function in Go?\n\nHow do you declare and call a function in Go?\n\nWhat is the difference between a function and a method in Go?\n\nCan a Go function return multiple values? Give an example.\n\nWhat is the purpose of the defer keyword inside a function?\n\nWhat are named return values in Go?\n\nWhat is the default return value of a function if you don’t explicitly return anything?\n\nCan you declare a function inside another function in Go?\n\nWhat does the init() function do in Go?\n\nWhat’s the difference between init() and main()?\n\n\n\n🟡 Intermediate Level\n\nWhat are variadic functions in Go? Give an example.\n\nWhat is the use of the blank identifier _ in function return values?\n\nHow are functions treated as first-class citizens in Go?\n\nHow do you pass a function as an argument to another function?\n\nHow can you return a function from another function?\n\nWhat is a closure in Go? Explain with an example.\n\nHow is error handling done using functions in Go?\n\nWhat happens if you use defer inside a loop with a function call?\n\nCan you modify a variable from an outer function inside an inner function?\n\nExplain how Go handles recursion in functions.\n\n               \n\n🔵 Advanced Level\n\nHow are anonymous functions useful in Go?\n\nWhat is the difference between a function literal and a named function?\n\nCan you create methods on types other than structs (e.g., slice, map, or alias types)?\n      \nHow are function pointers used in Go?                   \n\nHow does Go handle function inlining and optimization at compile time?\n\nExplain how closures capture variables in Go.\n\nCan a deferred function modify the return value of the enclosing function?\n\nWhat happens if a function panics? How can you recover from it?\n\nHow does Go handle concurrency with functions (goroutines)?\n\nExplain how to use functions with channels for synchronization.",
+      "fontSize": 16.73034212552583,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "🟢 Basic Level\n\nWhat is a function in Go?\n\nHow do you declare and call a function in Go?\n\nWhat is the difference between a function and a method in Go?\n\nCan a Go function return multiple values? Give an example.\n\nWhat is the purpose of the defer keyword inside a function?\n\nWhat are named return values in Go?\n\nWhat is the default return value of a function if you don’t explicitly return anything?\n\nCan you declare a function inside another function in Go?\n\nWhat does the init() function do in Go?\n\nWhat’s the difference between init() and main()?\n\n\n\n🟡 Intermediate Level\n\nWhat are variadic functions in Go? Give an example.\n\nWhat is the use of the blank identifier _ in function return values?\n\nHow are functions treated as first-class citizens in Go?\n\nHow do you pass a function as an argument to another function?\n\nHow can you return a function from another function?\n\nWhat is a closure in Go? Explain with an example.\n\nHow is error handling done using functions in Go?\n\nWhat happens if you use defer inside a loop with a function call?\n\nCan you modify a variable from an outer function inside an inner function?\n\nExplain how Go handles recursion in functions.\n\n               \n\n🔵 Advanced Level\n\nHow are anonymous functions useful in Go?\n\nWhat is the difference between a function literal and a named function?\n\nCan you create methods on types other than structs (e.g., slice, map, or alias types)?\n      \nHow are function pointers used in Go?                   \n\nHow does Go handle function inlining and optimization at compile time?\n\nExplain how closures capture variables in Go.\n\nCan a deferred function modify the return value of the enclosing function?\n\nWhat happens if a function panics? How can you recover from it?\n\nHow does Go handle concurrency with functions (goroutines)?\n\nExplain how to use functions with channels for synchronization.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
