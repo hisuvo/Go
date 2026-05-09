@@ -13,3 +13,4 @@ func main() {
 		fmt.Printf("Value is -> %v and this type is -> %T\n", value, value)
 	}
 }
+
