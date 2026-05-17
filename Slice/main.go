@@ -21,7 +21,7 @@ func main() {
 	s = append(s, 34)
 
 	x := s
-	x = append(x, 24)
+	x = append(x, 243)
 	s = append(s, 90)
 
 	fmt.Println("s -->",s)

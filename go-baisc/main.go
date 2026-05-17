@@ -32,7 +32,12 @@ func about() User {
 	}
 }
 
+// slice info
 
 func main() {
-	
+	var runes []rune
+	for _, r := range "Hellow suvo"{
+		runes = append(runes, r)
+	}
+fmt.Printf("%q\n",runes)
 }

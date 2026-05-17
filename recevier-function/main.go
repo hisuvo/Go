@@ -2,27 +2,33 @@ package main
 
 import "fmt"
 
-type Persion struct{
+type Person struct {
 	name string
-	age int
+	age  int
 }
 
-// this is reciver function
-func (p Persion) introduce() {
-    fmt.Println("My name is", p.name)
-    fmt.Println("My age is", p.age)
+func (p *Person) showInfo() {
+	p.name = "Rajib"
+	p.age = 18
+
+	fmt.Printf("From ShowInfo Function: My name is %v and I am %v years old \n", p.name, p.age)
+}
+
+func (p *Person) changeName(){
+	p.name = "Anupom Datta"
+	p.age = 25
+
+	fmt.Printf("From ChangeName Function: My name is %v and I am %v years old \n", p.name, p.age)
 }
 
 func main() {
-	user1 := Persion{
+	user := Person{
 		name: "suvo",
-		age: 24,
-	}
-	user2 := Persion{
-		name: "Rajib Datta",
-		age: 19,
+		age:  24,
 	}
 
-	user1.introduce()
-	user2.introduce()
+	user.showInfo()
+	user.changeName()
+	fmt.Printf("From Main Function: My name is %v and I am %v years old", user.name, user.age)
+
 }
