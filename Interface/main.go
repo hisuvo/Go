@@ -36,8 +36,8 @@ func EngineStart(v Vehicle){
 }
 
 func main() {
-	fmt.Println("Go interface")
-	thair := Car{name:"Mahidra Thair",color: "Black",price: 1500000, model: "4x4"}
-	fmt.Printf("Car name: %v, color: %v, pirce: %v, model: %v \n", thair.name, thair.color, thair.price, thair.model)
-	EngineStart(thair)
+	// fmt.Println("Go interface")
+	// thair := Car{name:"Mahidra Thair",color: "Black",price: 1500000, model: "4x4"}
+	// fmt.Printf("Car name: %v, color: %v, pirce: %v, model: %v \n", thair.name, thair.color, thair.price, thair.model)
+	// EngineStart(thair)
 }
