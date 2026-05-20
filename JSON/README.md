@@ -504,3 +504,335 @@ func main() {
   }
 }
 ```
+
+ধরো এই code আছে:
+
+```go
+var user User
+
+json.Unmarshal(data, &user)
+```
+
+এখানে `&user` কেন দিলাম সেটা বুঝতে হলে আগে বুঝতে হবে Go function কীভাবে variable receive করে।
+
+---
+
+# Go Defaultভাবে Copy পাঠায়
+
+ধরো:
+
+```go
+func change(name string) {
+	name = "Suvo"
+}
+
+func main() {
+	myName := "Rahim"
+
+	change(myName)
+
+	fmt.Println(myName)
+}
+```
+
+---
+
+# Output
+
+```go
+Rahim
+```
+
+---
+
+# কেন change হলো না?
+
+কারণ:
+
+```go
+change(myName)
+```
+
+এখানে `myName` এর copy গেছে।
+
+Memory visualization:
+
+```text
+main memory:
+
+myName = "Rahim"
+```
+
+Function call এর সময়:
+
+```text
+change(name)
+
+name = copy of myName
+```
+
+তাই original variable change হয়নি।
+
+---
+
+# এখন Pointer Example
+
+```go
+func change(name *string) {
+	*name = "Suvo"
+}
+
+func main() {
+
+	myName := "Rahim"
+
+	change(&myName)
+
+	fmt.Println(myName)
+}
+```
+
+---
+
+# Output
+
+```go
+Suvo
+```
+
+---
+
+# এখানে কী হলো?
+
+```go
+&myName
+```
+
+মানে:
+
+```text
+myName এর memory address পাঠাও
+```
+
+---
+
+# ধরো memory:
+
+```text
+myName = "Rahim"
+
+address = 0x123
+```
+
+Function receive করছে:
+
+```go
+name *string
+```
+
+মানে:
+
+```text
+name = 0x123
+```
+
+---
+
+# তারপর:
+
+```go
+*name = "Suvo"
+```
+
+মানে:
+
+```text
+0x123 address এর value change করো
+```
+
+এখন original variable change হয়ে গেছে।
+
+---
+
+# এবার আসি json.Unmarshal এ
+
+---
+
+# এই function এর কাজ কী?
+
+```go
+json.Unmarshal()
+```
+
+JSON data নিয়ে struct এর ভিতরে value ভরে।
+
+Example:
+
+```json
+{
+  "name": "Suvo",
+  "age": 24
+}
+```
+
+এটি Go struct এ set করবে।
+
+---
+
+# ধরো code:
+
+```go
+var user User
+```
+
+এখন memory:
+
+```text
+user:
+	Name = ""
+	Age  = 0
+```
+
+---
+
+# যদি এটা করি
+
+```go
+json.Unmarshal(data, user)
+```
+
+তাহলে function শুধু copy পাবে।
+
+মানে:
+
+```text
+copy of user
+```
+
+এখন function copy modify করবে।
+
+Original `user` change হবে না।
+
+---
+
+# তাই Unmarshal এর দরকার original memory access
+
+এই কারণে:
+
+```go
+json.Unmarshal(data, &user)
+```
+
+দেওয়া হয়।
+
+---
+
+# এখন কী হয়?
+
+```go
+&user
+```
+
+মানে:
+
+```text
+user struct এর memory address পাঠাও
+```
+
+---
+
+# Memory Visualization
+
+Before:
+
+```text
+user
+	Name = ""
+	Age  = 0
+```
+
+JSON:
+
+```json
+{
+  "name": "Suvo",
+  "age": 24
+}
+```
+
+Unmarshal:
+
+```go
+json.Unmarshal(data, &user)
+```
+
+Function directly original memory modify করছে:
+
+```text
+user
+	Name = "Suvo"
+	Age  = 24
+```
+
+---
+
+# Real Analogy
+
+ধরো:
+
+```text
+user = একটা বাড়ি
+```
+
+---
+
+## Without Pointer
+
+তুমি বাড়ির photocopy দিলে।
+
+সে copy তে change করলো।
+
+Original বাড়ি same রইলো।
+
+---
+
+## With Pointer
+
+তুমি বাড়ির address দিলে।
+
+সে original বাড়িতে গিয়ে change করলো।
+
+---
+
+# এজন্য সব decode/scan function এ pointer লাগে
+
+যেমন:
+
+```go
+json.Unmarshal()
+json.Decode()
+fmt.Scan()
+database Scan()
+```
+
+কারণ এরা original variable modify করে।
+
+---
+
+# Important Rule
+
+## যদি function variable change করতে চায়:
+
+তাহলে pointer লাগে।
+
+---
+
+# Interview Question
+
+## Question:
+
+Why does `json.Unmarshal()` require a pointer?
+
+## Answer:
+
+Because `json.Unmarshal()` needs to modify the original struct variable directly in memory. Without a pointer, it would only receive a copy of the data.
