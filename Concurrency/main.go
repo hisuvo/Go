@@ -1,6 +1,7 @@
 package main
 
 import (
+	"concurrency/gochannel"
 	"concurrency/group"
 	"concurrency/rc"
 	"fmt"
@@ -67,7 +68,6 @@ func main() {
 	wg.Wait() // wait untils counter is 0
 
 	
-	
 
 	//basic go
 	fmt.Println("--------------------------------------")
@@ -84,5 +84,11 @@ func main() {
 	fmt.Println("Race Condition")
 	fmt.Println("-------------------------")
 	rc.RaceCondition()
+
+	// go Channel here
+	fmt.Println("-------------------------")
+	fmt.Println("Go Channel")
+	fmt.Println("-------------------------")
+	gochannel.GoChannel()
 
 }
