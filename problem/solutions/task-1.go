@@ -1,4 +1,4 @@
-package main
+package problem
 
 import "fmt"
 
@@ -25,7 +25,7 @@ func calculateGrade(score int) string{
 	}
 }
 
-func main() {
+func ResultOfGPA() {
 	
 	var score int
 	var chose int
