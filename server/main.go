@@ -48,5 +48,7 @@ func main() {
 	// server()
 	// crud.TestOne()
 	// crud.TestTwo()
-	crud.TestFakeDB()
+	// crud.TestFakeDB()
+	crud.RealDataBase()
+	
 }
