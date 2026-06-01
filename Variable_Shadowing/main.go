@@ -8,7 +8,7 @@ func main() {
 	age := 30
 	
 	if age > 120 {
-		a := 47
+		a := 47 
 		fmt.Println("Condition is ture ->",a)
 	} else {
 		a := 40

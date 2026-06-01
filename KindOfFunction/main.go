@@ -1,7 +1,7 @@
 package main
 
 import (
-	"KindOfFunction/utils"
+	"KindOfFunction/functions"
 	"fmt"
 )
 
@@ -9,6 +9,7 @@ import (
 func main() {
 	fmt.Println(" Main Function ")
 	fmt.Println("===============")
-	utils.Expression()
+	// utils.Expression()
+	functions.HigerOrderFunc()
 
 }
