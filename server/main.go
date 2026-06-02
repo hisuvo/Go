@@ -49,6 +49,7 @@ func main() {
 	// crud.TestOne()
 	// crud.TestTwo()
 	// crud.TestFakeDB()
-	crud.RealDataBase()
+	// crud.RealDataBase()
+	crud.PgxDataBase()
 	
 }
